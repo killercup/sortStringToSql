@@ -1,0 +1,28 @@
+{
+  "name": "sort-string-to-sql",
+  "version": "1.0.0",
+  "description": "Convert 'sort expressions' to SQL expressions to be used in 'ORDER BY'. E.g.: `-aired,id` -> `aired DESC NULLS LAST, id ASC NULLS LAST`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint *.js && mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/killercup/sortStringToSql.git"
+  },
+  "keywords": [
+    "sql"
+  ],
+  "author": "Pascal Hertleif <killercup@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/killercup/sortStringToSql/issues"
+  },
+  "homepage": "https://github.com/killercup/sortStringToSql",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "eslint": "^0.9.2",
+    "lodash": "^2.4.1",
+    "mocha": "^2.0.1"
+  }
+}
