@@ -11,7 +11,7 @@
  * (See tests file for more examples.)
  */
 
-var sortStrFormat = /^([+-]|)([\w.]+)(-|)$/;
+var sortStrFormat = /^([+-])?([\w.]+)(-)?$/;
 
 /**
  * Convert One Sort Expression to SQL
@@ -21,7 +21,6 @@ var sortStrFormat = /^([+-]|)([\w.]+)(-|)$/;
  *   input was invalid.
  */
 function convertOneSortStrFieldToSQL(sortStr) {
-  'use strict';
   var parsed = sortStr.match(sortStrFormat);
   if (parsed === null) {
     return '';
@@ -43,7 +42,6 @@ function convertOneSortStrFieldToSQL(sortStr) {
  *   ommited.
  */
 module.exports = function convertSortStrToSQL(sortStr) {
-  'use strict';
   if (typeof sortStr !== 'string') { return ''; }
 
   return sortStr.split(',')
